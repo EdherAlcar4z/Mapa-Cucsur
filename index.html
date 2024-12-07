@@ -1,22 +1,464 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa CucSur</title>
-    <link rel="stylesheet" href="../mapa/estilos/fondomapa.css">
+    <link rel="stylesheet" href="../mapa/estilos/ventana1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="wrapper">
-        <video autoplay muted loop id="bg-video">
-            <source src="../mapa/img/MapaInfo.mp4" type="video/mp4">
-        </video>
-        <img id="logo" src="../mapa/img/LogoMapaInteractivo.png" alt="Logo del Mapa Interactivo">
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/LogoMapaInteractivo.png" alt="" width="45" height="45" class="d-inline-block align-text-top">
+                Mapa CUCSUR
+            </a>
+        </div>
+    </nav>
+
+    <img src="../mapa/img/MapaFinal.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="" alt="Aula Magna" title="Aula Magna" href="javascript:void(0)" coords="112,266,407,478"
+            shape="rect" onclick="openModal('modalaulamagna')">
+        <area target="" alt="Edificio P" title="Edificio P" href="javascript:void(0)" coords="555,448,612,734"
+            shape="rect" onclick="openModal('modaledificioP')">
+        <area target="" alt="Edificio I" title="Edificio I" href="javascript:void(0)" coords="622,446,672,585"
+            shape="rect" onclick="openModal('modaledificioI')">
+        <area target="" alt="Edificio Q" title="Edificio Q" href="javascript:void(0)" coords="848,773,787,493"
+            shape="rect" onclick="openModal('modaledificioQ')">
+        <area target="" alt="Edificio R" title="Edificio R" href="javascript:void(0)" coords="799,287,868,470"
+            shape="rect" onclick="openModal('modaledificioR')">
+        <area target="" alt="Edificio S" title="Edificio S" href="javascript:void(0)" coords="918,288,967,583"
+            shape="rect" onclick="openModal('modaledificioS')">
+        <area target="" alt="Edificio T" title="Edificio T" href="javascript:void(0)" coords="1007,287,1082,585"
+            shape="rect" onclick="openModal('modaledificioT')">
+        <area target="" alt="Rectoria" title="Rectoria" href="javascript:void(0)" coords="1091,763,960,644" shape="rect"
+            onclick="openModal('modalrectoria')">
+
+        
+        <area target="" alt="Edificio B" title="Edificio B" href="coordis.html" coords="1101,381,1225,553"
+            shape="rect">
+
+        <area target="" alt="Edificio C" title="Edificio C" href="javascript:void(0)" coords="1270,412,1367,600"
+            shape="rect" onclick="openModal('modaledificioC')">
+        <area target="" alt="Biblioteca" title="Biblioteca" href="javascript:void(0)" coords="1270,666,1404,849"
+            shape="rect" onclick="openModal('modalbiblioteca')">
+        <area target="" alt="Edificio U" title="Edificio U" href="javascript:void(0)" coords="1387,319,1448,624"
+            shape="rect" onclick="openModal('modaledificioU')">
+        <area target="" alt="Edificio V" title="Edificio V" href="javascript:void(0)" coords="1464,317,1540,624"
+            shape="rect" onclick="openModal('modaledificioV')">
+        <area target="" alt="Edificio E" title="Edificio E" href="javascript:void(0)" coords="1576,317,1667,627"
+            shape="rect" onclick="openModal('modaledificioE')">
+        <area target="" alt="Cafetería 2" title="Cafetería 2" href="javascript:void(0)" coords="1460,651,1567,724"
+            shape="rect" onclick="openModal('modalcafeteria2')">
+    </map>
+
+    
+        
+
+    <!-- Modal para Aula Magna-->
+    <div id="modalaulamagna" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalaulamagna')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/aulamagna/fachadaaulamagna.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Aula magna</li>
+                        <li>Oficina de deportes</li>
+                        <li>Oficinas radio</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;"">
+                        <h2>Piso #2</h2>
+                        <li>Vinculación</li>
+                        <li>Difusión</li>
+                        <li>Radio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="../mapa/script/menuprincipal.js"></script>
+    <!-- Modal para Edificio P -->
+    <div id="modaledificioP" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioP')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioP/fachada/FachadaP.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Sociedad de Alumnos</li>
+                        <li>Tramites de Egreso</li>
+                        <li>Control Escolar</li>
+                        <li>Análisis de Suelo</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Aula P-1</li>
+                        <li>Aula P-2</li>
+                        <li>Aula P-3</li>
+                        <li>Aula P-4</li>
+                        <li>Lab. de Contaduría</li>
+                        <li>Centro de Aprendizaje Global</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Aula P-5</li>
+                        <li>Aula P-6</li>
+                        <li>Aula P-7</li>
+                        <li>Aula P-8</li>
+                        <li>Aula P-9</li>
+                        <li>Aula P-10</li>
+                        <li>Taller de Redes (P-13, P-23)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio I -->
+    <div id="modaledificioI" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioI')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioI/fachada/fachadaI.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Aula - 1</li>
+                        <li>Aula - 2</li>
+                        <li>Aula - 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio Q -->
+    <div id="modaledificioQ" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioQ')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioQ/fachada/fachadaQ.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Herbario</li>
+                        <li>Cubiculos de Investigación</li>
+                        <li>Cubiculos de Botanica</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #2</h2>
+                        <li>Lab. de Zoología</li>
+                        <li>Preparación de Zoología</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #3</h2>
+                        <li>Aula - Q09</li>
+                        <li>Aula - Q10</li>
+                        <li>Lab. de Turismo Alternativo</li>
+                        <li>Cubiculos Agrícolas</li>
+                        <li>Cubiculos Apícolas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio R -->
+    <div id="modaledificioR" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioR')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioR/fachada/fachadaR.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Contraloría</li>
+                        <li>Dep. Ciencias Administrativas</li>
+                        <li>Dep. Contabilidad</li>
+                        <li>Dep. de Desarrollo</li>
+                        <li>Dep. Jurídico</li>
+                        <li>Aula - R10</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #2</h2>
+                        <li>Aula - R1</li>
+                        <li>Aula - R2</li>
+                        <li>Aula - R3</li>
+                        <li>Aula - R4</li>
+                        <li>Aula - R5</li>
+                        <li>Aula - R6</li>
+                        <li>Aula - R7</li>
+                        <li>Aula - R8</li>
+                        <li>Aula - R9</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio S -->
+    <div id="modaledificioS" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioS')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioS/fachada/fachadaS.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                    <h2>Piso #1</h2>
+                        <li>Unidad de Protección Civil</li>
+                        <li>Lab. Física Micro y Espectroscopia</li>
+                        <li>Sala de Juicios Orales</li>
+                        <li>Taller de Impresión 3D</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #2</h2>
+                        <li>Dep. de Ecología</li>
+                        <li>Lab. Eco y Agroecosistemas</li>
+                        <li>Desarrollo Comunitario</li>
+                        <li>Cuencas y Suelos</li>
+                        <li>Genética Evolutiva</li>
+                        <li>Desarrollo Agroforestal</li>
+                        <li>Administración DERN</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio T -->
+    <div id="modaledificioT" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioT')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioT/fachada/fachadaT.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Sala de Comisiones</li>
+                        <li>Lab. de Siistema de Información Geografica</li>
+                        <li>Sala de Investigación</li>
+                        <li>Manejo Forestal</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #2</h2>
+                        <li>Aula - T1</li>
+                        <li>Aula - T2</li>
+                        <li>Aula - T3</li>
+                        <li>Aula - T4</li>
+                        <li>Aula - T5</li>
+                        <li>Aula - T6</li>
+                        <li>Aula - T7</li>
+                        <li>Aula - T8</li>
+                        <li>Aula - T9</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Rectoría -->
+    <div id="modalrectoria" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalrectoria')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/rectoria/fachada/fachadaRectoria.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Coordinación de Finanzas</li>
+                        <li>Coordinación de Planeación</li>
+                        <li>Coordinación Personal</li>
+                        <li>Unidad de Calidad</li>
+                        <li>Unidad de Becas</li>
+                        <li>Unidad de Desarrollo Académico y Movilidad</li>
+                        <li>Coordinación de servicios académicos</li>
+                        <li>Unidad de CENEVAL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio C -->
+    <div id="modaledificioC" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioC')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioC/img/fachadaC.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Unidad de Multimedia Instruccional</li>
+                        <li>Unidad de Cómputo y Telecomunicaciones</li>
+                        <li>Aula de Comunidades Indígenas</li>
+                        <li>Aula - C1</li>
+                        <li>Aula - C2</li>
+                        <li>Aula - C3</li>
+                        <li>Aula - C4</li>
+                        <li>Aula - C5</li>
+                        <li>Aula - C6 (Lab. Macs)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Biblioteca  -->
+    <div id="modalbiblioteca" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalbiblioteca')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/biblioteca/fachada/fachadaBiblioteca.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Sala de Lectura</li>
+                        <li>Cubículos</li>
+                        <li>Sala de Gobierno</li>
+                        <li>Jefatura de Inidad: Orientación y Ubicación</li>
+                        <li>Sala de Extractores</li>
+                        <li>Administración</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio U -->
+    <div id="modaledificioU" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioU')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioU/fachada/fachadaU.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Aula - U1</li>
+                        <li>Aula - U2</li>
+                        <li>Aula - U3</li>
+                        <li>Cubículos #1</li>
+                        <li>Cubículos #2</li>
+                        <li>Departamento de Ingenierías</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #2</h2>
+                        <li>Aula - U4</li>
+                        <li>Aula - U5</li>
+                        <li>Aula - U6</li>
+                        <li>Aula - U7</li>
+                        <li>Aula - U8</li>
+                        <li>Aula - U9</li>
+                        <li>Aula - U10</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #3</h2>
+                        <li>Aula - U11</li>
+                        <li>Aula - U12</li>
+                        <li>Aula - U13</li>
+                        <li>Aula - U14</li>
+                        <li>Aula - U15</li>
+                        <li>Aula - U16</li>
+                        <li>Aula - U17</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio V -->
+    <div id="modaledificioV" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioV')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioV/fachada/fachadaV.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Aula V-1</li>
+                        <li>Aula V-2</li>
+                        <li>Laboratorio de Panadería (Cocina Fría)</li>
+                        <li>Laboratorio de Panadería (Cocina Caliente, Almacén)</li>
+                    </ul>
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #2</h2>
+                        <li>Aula V-3</li>
+                        <li>Aula V-4</li>
+                        <li>Aula V-5</li>
+                        <li>Aula V-6</li>
+                        <li>Aula V-7</li>
+                        <li>Aula V-8</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio E -->
+    <div id="modaledificioE" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioE')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioE/fachada/fachadaE.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul style= "text-align: center; line-height: 2;">
+                        <h2>Piso #1</h2>
+                        <li>Lab. Automatización, control y robótica</li>
+                        <li>Aula - E7</li>
+                        <li>Aula - E9</li>
+                        <li>Responsable de laboratorio (Préstamo)</li>
+                        <li>Lab. Ensaye de Materiales y Topografía</li>
+                        <li>Lab. Hidráulica</li>
+                        <li>Lab. Diseño Cad/Cam</li>
+                        <li>Lab. Adquisición de Datos</li>
+                        <li>Lab. Electricidad y Mantenimiento de Computadoras</li>
+                        <li>Lab. Mecánica Automotriz</li>
+                        <li>Lab. Máquinas y Herramientas</li>
+                        <li>Lab. Reciclado de Polímeros e Impresión 3D</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Edificio B -->
+    <div id="modaledificioB" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modaledificioB')">&times;</span>
+            <div class="content-wrapper">
+                <img src="../mapa/edificios/edificioB/img/fachadaedificioB.jpg" width="500" height="400">
+                <div class="lists">
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../mapa/script/ventana1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
